@@ -1,14 +1,17 @@
-name = "amazon-clone"
-compatibility_date = "2024-01-01"
-compatibility_flags = [ "nodejs_compat" ]
-
-[[kv_namespaces]]
-binding = "KV_USERS"
-preview_id = "your-preview-kv-id"  # Optional
-
-[site]
-bucket = "./"
-
-# Pages Functions
-[durable_objects]
-bindings = [{name = "KV_USERS", class_name = "KV"}]  # Auto-creates KV
+{
+  "name": "amazon-clone",
+  "type": "webpack",
+  "account_id": "",
+  "workers_dev": true,
+  "local": false,
+  "webpack_config": "webpack.config.js",
+  "site": {
+    "bucket": "./"
+  },
+  "kv_namespaces": [
+    {
+      "binding": "KV_USERS",
+      "id": ""
+    }
+  ]
+}
