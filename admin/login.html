@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - Amazon</title>
+    <link rel="stylesheet" href="../css/amazon.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-header">
+            <img src="https://via.placeholder.com/100x40/FF9900/000000?text=Admin" alt="Admin">
+            <h1>Admin Login</h1>
+        </div>
+        <form class="auth-form" id="adminLoginForm">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" id="adminUser" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="adminPass" required>
+            </div>
+            <button type="submit" class="auth-submit">Login</button>
+        </form>
+        <div id="adminMessage"></div>
+    </div>
+    <script src="../js/app.js"></script>
+</body>
+</html>

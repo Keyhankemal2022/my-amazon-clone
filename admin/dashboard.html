@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/amazon.css">
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="dashboard-nav">
+            <h3>Admin Panel</h3>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </div>
+    
+    <div class="container" style="padding:40px;">
+        <h1>Admin Dashboard</h1>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Total Users</h3>
+                <div class="stat-number" id="totalUsers">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Active Users</h3>
+                <div class="stat-number" id="activeUsers">0</div>
+            </div>
+        </div>
+        
+        <div class="admin-table">
+            <h2>All Users</h2>
+            <button onclick="loadUsers()" class="auth-submit" style="width:auto;margin-bottom:20px;">Refresh Users</button>
+            <div id="usersList">Loading...</div>
+        </div>
+    </div>
+    
+    <script src="../js/app.js"></script>
+    <script>
+        async function loadUsers() {
+            const res = await fetch('/api/users');
+            const users = await res.json();
+            document.getElementById('usersList').innerHTML = `
+                <table>
+                    <tr><th>ID</th><th>Name</th><th>Email</th><th>Date</th></tr>
+                    ${users.map(u => `<tr><td>${u.id}</td><td>${u.name}</td><td>${u.email}</td><td>${u.created || 'N/A'}</td></tr>`).join('')}
+                </table>
+            `;
+        }
+        loadUsers();
+    </script>
+</body>
+</html>

@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Amazon Ember", Arial, sans-serif;
+    line-height: 1.4;
+    color: #0F1111;
+    background: #fff;
+}
+
+/* Header - Exact Amazon Style */
+.amazon-header {
+    background: #131921;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.header-top {
+    padding: 10px 0;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo img {
+    height: 40px;
+    width: auto;
+}
+.header-search {
+    flex: 1;
+    max-width: 600px;
+    margin: 0 20px;
+    display: flex;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.search-select {
+    background: #f3f3f3;
+    border: none;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #0F1111;
+}
+.search-input {
+    flex: 1;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+}
+.search-input:focus {
+    outline: none;
+}
+.search-btn {
+    background: #F08804;
+    border: none;
+    padding: 10px 15px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.header-actions a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.account-link:hover, .returns-link:hover, .orders-link:hover {
+    text-decoration: underline;
+}
+.auth-link {
+    background: #F08804;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: linear-gradient(135deg, #232F3E 0%, #1A2533 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+.hero-banner h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.hero-banner p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+.hero-cta {
+    display: inline-block;
+    background: #FF9900;
+    color: #111;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+.hero-cta:hover {
+    background: #F08804;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255,153,0,0.3);
+}
+
+/* Auth Section */
+.auth-section {
+    padding: 80px 0;
+    background: #F7F7F7;
+}
+.auth-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.auth-card {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.auth-card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0F1111;
+}
+
+/* Amazon Buttons */
+.btn-amazon {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    width: 100%;
+    text-align: center;
+}
+.btn-amazon.primary {
+    background: #FF9900;
+    color: #111;
+    border-color: #F08804;
+}
+.btn-amazon.primary:hover {
+    background: #F08804;
+    transform: translateY(-1px);
+}
+.btn-amazon.secondary {
+    background: #232F3E;
+    color: white;
+    border-color: #232F3E;
+}
+.btn-amazon.secondary:hover {
+    background: #1A2533;
+}
+
+/* Login/Register Pages */
+.auth-page {
+    min-height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+.auth-container {
+    max-width: 400px;
+    width: 100%;
+}
+.auth-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.auth-header img {
+    height: 40px;
+    margin-bottom: 10px;
+}
+.auth-header h1 {
+    font-size: 28px;
+    color: #0F1111;
+    margin-bottom: 5px;
+}
+.auth-header p {
+    color: #565959;
+    font-size: 16px;
+}
+.auth-form {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #111;
+}
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #A6A6A6;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+.form-group input:focus {
+    outline: none;
+    border-color: #E77600;
+    box-shadow: 0 0 0 3px rgba(231,118,0,0.1);
+}
+.auth-submit {
+    width: 100%;
+    background: #FF9900;
+    border: 1px solid #F08804;
+    color: #111;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.auth-submit:hover {
+    background: #F08804;
+}
+.auth-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #007185;
+    text-decoration: none;
+}
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* Dashboard */
+.dashboard-header {
+    background: #232F3E;
+    color: white;
+    padding: 15px 0;
+}
+.dashboard-nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-greeting {
+    font-size: 18px;
+    font-weight: 500;
+}
+.logout-btn {
+    background: #FF9900;
+    color: #111;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.stat-number {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #FF9900;
+}
+
+/* Admin Tables */
+.admin-table {
+    background: white;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background: #F7F7F7;
+    font-weight: 600;
+    color: #0F1111;
+}
+.admin-actions button {
+    background: #FF9900;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-search { margin: 0 10px; }
+    .header-actions { gap: 10px; }
+    .auth-grid { grid-template-columns: 1fr; gap: 20px; }
+    .hero-banner h1 { font-size: 2em; }
+}
