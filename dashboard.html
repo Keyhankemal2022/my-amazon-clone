@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Dashboard</title>
+    <link rel="stylesheet" href="css/amazon.css">
+</head>
+<body>
+    <div class="dashboard-header">
+        <div class="dashboard-nav">
+            <img src="https://via.placeholder.com/100x40/FF9900/000000?text=amazon" alt="Amazon">
+            <div>
+                <span class="user-greeting" id="userName">User</span>
+                <button class="logout-btn" onclick="logout()">Sign out</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>Total Users</h3>
+            <div class="stat-number" id="totalUsers">0</div>
+        </div>
+        <div class="stat-card">
+            <h3>Active Users</h3>
+            <div class="stat-number" id="activeUsers">0</div>
+        </div>
+    </div>
+    
+    <script src="js/app.js"></script>
+</body>
+</html>

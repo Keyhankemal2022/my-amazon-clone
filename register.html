@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Amazon Account</title>
+    <link rel="stylesheet" href="css/amazon.css">
+</head>
+<body class="auth-page">
+    <div class="auth-container">
+        <div class="auth-header">
+            <img src="https://via.placeholder.com/100x40/FF9900/000000?text=amazon" alt="Amazon">
+            <h1>Create account</h1>
+        </div>
+        <form class="auth-form" id="registerForm">
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="regName" required>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="regEmail" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="regPassword" required>
+            </div>
+            <button type="submit" class="auth-submit">Create your Amazon account</button>
+        </form>
+        <a href="login.html" class="auth-link">Already have an account? Sign in</a>
+        <div id="registerMessage"></div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
